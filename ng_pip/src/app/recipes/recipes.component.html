@@ -1,0 +1,71 @@
+<div class="container mt-5" style="background-color: #B8EAB6; padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+  <div style="order: 1;">Recipes</div>
+  <div style="order: 2;"><b> Dashboard</b> > Recipes</div>
+</div>
+
+<div class="card mt-5 mx-auto" style="width: 70rem;height: 30rem;">
+  <div class="card-body">
+    <h5 class="card-title text-center" style="background-color: #D9D9D9;padding: 20px;"><b> Recipes Management </b></h5>
+    <h6 class="card-subtitle mb-2 mt-4 text-muted">
+      <form class="form-group" (ngSubmit) = "ngSubmit()">
+        <div class="row">
+          <div class="col">
+            <input type="text" name="title" placeholder="Title" class="form-control" [(ngModel)] = "recipe.Title">
+          </div>
+          <!--<div class="col">
+            <input type="file" name="url" placeholder="Url img" class="form-control" [(ngModel)] = "recipe.image">
+          </div>-->
+          <div class="col">
+            <input type="text" name="url" placeholder="Url img" class="form-control" [(ngModel)] = "recipe.image">
+          </div>
+          <div class="col">
+            <textarea class="form-control" placeholder="Description" name="Description"
+            [(ngModel)] = "recipe.Description"></textarea>
+          </div>
+          <div class="col">
+            <textarea class="form-control" placeholder="Ingredients" name="Ingredients"
+            [(ngModel)] = "recipe.Ingredients"></textarea>
+          </div>
+          <!--<div class="col">
+            <input type="text" name="description" placeholder="Description" class="form-control" [(ngModel)] = "recipe.Description">
+          </div>-->
+          <!--<div class="col">
+            <input type="text" name="ingredients" placeholder="Ingredients" class="form-control" [(ngModel)] = "recipe.Ingredients">
+          </div>-->
+        </div>
+        <p class="card-text text-center mt-4"><button type="submit" class="btn btn-warning"
+          style="color:white;width: 150px;">
+          Add</button></p>
+      </form>
+
+
+    </h6>
+
+        <table class="table table-striped mt-5">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Ingredients</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let recipe of recipes">
+              <th>{{recipe.id}}</th>
+              <td>{{recipe.Title}}</td>
+              <td>{{recipe.Description}}</td>
+              <td>{{recipe.Ingredients}}</td>
+              <td>
+                <button (click) = "deleteRecipe(recipe.id)" class="btn btn-outline-danger">Delete</button>
+                <button (click) = "updateRecipe(recipe.id)" class="btn btn-outline-secondary ms-2">Update</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+  </div>
+</div>
+

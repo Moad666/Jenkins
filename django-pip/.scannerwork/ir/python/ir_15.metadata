@@ -1,0 +1,3 @@
+rc.views.UserCountView.get_object
+==
+count

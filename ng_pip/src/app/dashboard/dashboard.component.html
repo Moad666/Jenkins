@@ -1,0 +1,65 @@
+<div class="container mt-5" style="background-color: #B8EAB6; padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+  <div style="order: 1;">Dashboard</div>
+  <div style="order: 2;"><b> Dashboard</b> > Dashboard</div>
+</div>
+<div class="container mt-5">
+  <div class="">
+    Welcome, <b> Moad </b>
+  </div>
+</div>
+
+<div class="container mt-2" style="display: flex; justify-content: center; align-items: center;">
+
+  <!-- First Set of Cards -->
+  <div style="display: flex;">
+
+    <!-- First Card -->
+    <div class="card ms-5 mt-5" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title" style="background-color: #D9D9D9; padding: 10px;"><b> Users </b></h5>
+        <h3 class="card-subtitle mb-2"><i class="bi bi-person-fill me-3"></i>{{ userCount || 0 }} Users</h3>
+        <h3 class="card-text" style="color: green;"><i class="bi bi-arrow-up-right me-3" style="color: green;"></i>+22.24%</h3>
+      </div>
+    </div>
+
+    <!-- Second Card -->
+    <div class="card ms-5 mt-5" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title" style="background-color: #D9D9D9; padding: 10px;"><b> Recipes </b></h5>
+        <h3 class="card-subtitle mb-2"><i class="bi bi-cake-fill me-3"></i>{{ recipeCount || 0 }} Recipes</h3>
+        <h3 class="card-text" style="color: green;"><i class="bi bi-arrow-up-right me-3" style="color: green;"></i>+31.66%</h3>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container mt-5" style="display: flex; justify-content: center; align-items: center;">
+
+  <!-- Second Set of Cards -->
+  <div style="display: flex;">
+
+    <!-- First Card -->
+    <div class="card ms-5 mt-5 mb-5" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title" style="background-color: #D9D9D9; padding: 10px;"><b> Reviews </b></h5>
+        <h3 class="card-subtitle mb-2"><i class="bi bi-star-fill me-3"></i>{{ ratingCount || 0 }} Reviews</h3>
+        <h3 class="card-text" style="color: green;"><i class="bi bi-arrow-up-right me-3" style="color: green;"></i>+22.24%</h3>
+      </div>
+    </div>
+
+    <!-- Second Card -->
+    <div class="card ms-5 mt-5 mb-5" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title" style="background-color: #D9D9D9; padding: 10px;"><b> Comments </b></h5>
+        <h3 class="card-subtitle mb-2"><i class="bi bi-chat-fill me-3"></i>{{ commentCount || 0 }} Comments</h3>
+        <h3 class="card-text" style="color: green;"><i class="bi bi-arrow-up-right me-3" style="color: green;"></i>+22.24%</h3>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<p class="mt-5"></p>
+
+

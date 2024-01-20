@@ -1,0 +1,28 @@
+<div class="card mt-5 mx-auto" style="width: 70rem;height: 30rem;">
+  <div class="card-body">
+    <h5 class="card-title text-center" style="background-color: #D9D9D9;padding: 20px;"><b> Users Management </b></h5>
+    <h6 class="card-subtitle mb-2 mt-4 text-muted">
+      <form class="form-group" (ngSubmit) = "onSubmit()">
+        <div class="row">
+          <div class="col">
+            <input type="text" name="username" placeholder="Username" class="form-control" [(ngModel)] = "user.username">
+          </div>
+          <div class="col">
+            <input type="email" name="email" placeholder="Email" class="form-control" [(ngModel)] = "user.email">
+          </div>
+          <div class="col">
+            <input type="password" name="password" placeholder="Password" class="form-control" [(ngModel)] = "user.password">
+          </div>
+          <div class="col">
+            <input type="password" name="confirmpassword" placeholder="Confirm password" class="form-control" [(ngModel)] = "user.password_confirm">
+          </div>
+        </div>
+        <p class="card-text text-center mt-4"><button type="submit" class="btn btn-outline-secondary"
+          style="width: 150px;">
+          Update</button></p>
+      </form>
+
+
+    </h6>
+  </div>
+</div>

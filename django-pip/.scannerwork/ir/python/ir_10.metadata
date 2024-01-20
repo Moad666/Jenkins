@@ -1,0 +1,4 @@
+rc.views.UserDetailView.perform_update
+==
+get
+save

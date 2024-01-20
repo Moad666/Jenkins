@@ -1,0 +1,51 @@
+<style>
+  .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: white;
+            opacity: 1; /* Firefox */
+}
+.form-control {
+    caret-color: white;
+    color: white;
+  }
+
+</style>
+<div class="container-fluid p-0 position-relative">
+  <img src="../assets/images/tomat.png" class="w-100" style="height: 300px; object-fit: cover;">
+
+  <h1 class="text-center mt-5">Last <b> Recipes </b></h1>
+  <hr class="container mt-2">
+  <!-- Input and Button for Search -->
+  <div class="text-center position-absolute top-50 start-50 translate-middle">
+    <div class="input-group mb-3">
+      <input [(ngModel)]="searchTerm" type="text" style="width: 350px;border-color: green;background-color: inherit;" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button (click)="searchRecipes()" class="btn btn-outline-success ms-3" type="button">
+          <i class="bi bi-search"></i> <!-- Assuming you are using Font Awesome for the search icon -->
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- End of Input and Button for Search -->
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let recipe of recipes">
+      <div class="card" [routerLink]="['/recipeDetail', recipe.id]">
+        <img [src]="recipe.image" class="card-img-top" alt="Recipe Image"> <!-- Add the actual image source -->
+        <div class="card-body">
+          <h5 class="card-title">{{ recipe.Title }}</h5>
+          <p class="card-text">{{ recipe.Description }}</p>
+          <p class="card-text"><strong>Ingredients:</strong> {{ recipe.Ingredients }}</p>
+          <div class="row text-center">
+            <p class="col-md-4"><i class="bi bi-chat-fill me-3"></i>{{ recipe.commentCount }}</p>
+            <p class="col-md-4" ><i class="bi bi-star-fill me-3"></i>{{ recipe.ratingCount }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

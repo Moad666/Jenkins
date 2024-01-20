@@ -1,0 +1,71 @@
+
+<h1 class="text-center mt-5"><b> Recipe </b> Description</h1>
+  <hr class="container mt-2">
+<div class="container mt-5">
+  <div class="card">
+    <div class="row no-gutters">
+      <!-- Left column for image -->
+      <div class="col-md-4">
+        <img [src]="selectedRecipe.image" alt="Recipe Image" class="card-img">
+      </div>
+      <!-- Right column for data -->
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ selectedRecipe.Title }}</h5>
+          <p class="card-text"><strong>Description:</strong> {{ selectedRecipe.Description }}</p>
+          <p class="card-text"><strong>Ingredients:</strong> {{ selectedRecipe.Ingredients }}</p>
+          <!-- rating.component.html -->
+          <div class="rating-stars">
+            <i class="bi bi-hand-thumbs-up" (click)="rateRecipe(1)" style="cursor: pointer;"></i>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<h1 class="text-center mt-5"><b>Add your comment</b></h1>
+<hr class="container mt-1">
+
+<div class="container">
+  <form class="form-group" (ngSubmit) ="createComment()">
+    <div class="row">
+      <div class="col-md-6">
+        <input type="text" name="text" placeholder="Comment" class="form-control" [(ngModel)]="comment.text">
+      </div>
+      <div class="col-md-6">
+        <input type="submit" class="btn btn-outline-success" value="Add">
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+<h1 class="text-center mt-5"><b>All Comments</b></h1>
+<hr class="container mt-1">
+
+<div class="container">
+  <table class="table table-striped text-center mt-2">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let comment of comments">
+        <td>{{ comment.user }}</td>
+        <td>{{ comment.text }}</td>
+        <!-- Add more columns as needed -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+

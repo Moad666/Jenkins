@@ -1,0 +1,5 @@
+rc.views.UserUpdate.update
+==
+pop
+perform_update
+get_object
